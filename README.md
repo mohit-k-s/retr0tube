@@ -1,4 +1,4 @@
-# RetroTube Terminal Player
+# retr0tube
 
 A retro-themed music player with terminal aesthetics that plays YouTube videos/playlists.
 
