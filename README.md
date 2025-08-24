@@ -2,9 +2,12 @@
 
 A retro-themed music player with terminal aesthetics that plays YouTube videos/playlists.
 
+![retr0tube](./retr0tube_preview.png)
+
+
 ## Features
 
-- **YouTube Integration**: Load individual videos or entire playlists
+- **YouTube Integration**: Load individual videos or entire p laylists
 - **Retro Terminal UI**: Green-on-black terminal styling with scanlines and flicker effects
 - **Playlist Management**: Add, remove, and clear tracks with animated transitions
 - **Seamless Playback**: Automatic track progression with preloading
