@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <title>YT Beats</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="music-player">
+        <div class="player-main">
+            <div class="player-header">
+                <h1>YT BEATS</h1>
+                <div class="status-message" id="statusMessage">Choose music to start playing</div>
+            </div>
+
+            <div class="main-thumbnail-container">
+                <div class="main-thumbnail" id="mainThumbnail">
+                    <img id="mainThumbnailImg" src="" alt="Track thumbnail" style="display: none;">
+                    <div class="thumbnail-placeholder">
+                        <div class="placeholder-icon">🎵</div>
+                        <div class="placeholder-text">NOW PLAYING</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="track-info">
+                <div class="track-title" id="trackTitle"> SYSTEM_READY</div>
+                <div class="track-artist" id="trackArtist"> </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="prevBtn" title="Previous track">⏮</button>
+                <button class="control-btn play-btn" id="playBtn" title="Play/Pause">▶</button>
+                <button class="control-btn" id="nextBtn" title="Next track">⏭</button>
+            </div>
+
+            <div class="playlist-selector-container">
+                <!-- <h3>🎵 Quick Start Playlists</h3> -->
+                <div class="playlist-categories" id="playlistCategories">
+                    <button class="category-btn active" data-category="all">All</button>
+                    <button class="category-btn" data-category="genres">Genres</button>
+                    <button class="category-btn" data-category="moods">Moods</button>
+                    <button class="category-btn" data-category="decades">Decades</button>
+                    <button class="category-btn" data-category="special">Special</button>
+                </div>
+            </div>
+
+            <div class="youtube-input-container">
+                <input type="text" class="youtube-input" id="youtubeUrl" placeholder="> ENTER_YOUTUBE_URL..."
+                    title="Enter a YouTube video URL">
+                <button class="load-btn" id="loadYoutubeBtn" title="Load the YouTube video into your playlist">
+                    LOAD</button>
+            </div>
+        </div>
+
+        <div class="playlist-sidebar">
+            <div class="playlist" id="playlist">
+                <div class="playlist-header">
+                    <h3> CURRENT_PLAYLIST</h3>
+                    <button class="clear-playlist-btn" id="clearPlaylistBtn" title="Clear entire playlist">
+                        CLEAR
+                    </button>
+                </div>
+                <div class="playlist-items" id="playlistItems">
+                    <p class="empty-playlist">No music loaded</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+    <div id="youtubePlayer" style="display: none;"></div>
+
+    <!-- Small Device Blocking Overlay -->
+    <div id="smallDeviceOverlay" class="small-device-overlay">
+        <div class="small-device-message">
+            <div class="terminal-cursor">█</div>
+            <h2>Hold it sparky, I ain't that good</h2>
+            <p>This music player needs a bigger screen to work properly.</p>
+            <p>Please use a desktop or tablet device.</p>
+        </div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
